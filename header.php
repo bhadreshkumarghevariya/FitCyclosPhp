@@ -3,10 +3,7 @@
 require_once './dbConnect.php';
 ?>
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edit this template
--->
+
 <html>
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,22 +17,22 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
     </head>
     <body>
         <header>
-            <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+            <nav class="navbar navbar-expand-sm navbar-dark">
                 <div class="container-fluid col-auto">
-                    <a class="navbar-brand" href="./index.php">
+                    <a class="navbar-brand active" href="./index.php">
                         <img src="./Assets/Logo/logo.png" alt="Avatar Logo" style="width:12rem;" class="rounded-pill"> 
                     </a>
                 </div>
                 <div class="container-fluid d-flex justify-content-center">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="./index.php">Home</a>
+                            <a class="nav-link active" href="./index.php">HOME</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link active" href="#">BIKES</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
+                            <a class="nav-link active" href="#">ACCESSORIES</a>
                         </li>
                     </ul>
 
@@ -47,16 +44,16 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
                         if ($_SESSION['loggedIn']) {
                             ?>
                             <ul class="nav navbar-nav navbar-right">
-                                <li class="nav-item"><a class="nav-link">Hello, <?php echo $_SESSION['firstName']; ?></a></li>
-                                <li class="nav-item"><a class="nav-link" href="./logout.php">Log Out</a></li>
+                                <li class="nav-item"><a class="nav-link active">Hello, <?php echo $_SESSION['firstName']; ?></a></li>
+                                <li class="nav-item"><a class="nav-link active" href="./logout.php">Log Out</a></li>
                             </ul>
                             <?php
                         }
                     } else {
                         ?>
                         <ul class="nav navbar-nav navbar-right">
-                            <li class="nav-item"><a class="nav-link" href="./signUp.php">Sign Up</a></li>
-                            <li class="nav-item"><a class="nav-link" href="./login.php">Log In</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="./signUp.php">Sign Up</a></li>
+                            <li class="nav-item"><a class="nav-link active" href="./login.php">Log In</a></li>
                         </ul>
     <?php
 }
@@ -66,10 +63,6 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Project/PHP/PHPProject.php to edi
         </header>
 
 
-<?php
 
-/* 
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHP.php to edit this template
- */
+
 
