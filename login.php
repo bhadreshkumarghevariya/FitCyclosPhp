@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $email = test_input($_POST["email"]);
     $password = test_input($_POST["password"]);
 
-    $sql = "SELECT * FROM `user` where userEmail='$email'&& password='$password'";
+    $sql = "SELECT * FROM `user` where email='$email'&& password='$password'";
 
     $query = mysqli_query($conn, $sql);
 
@@ -23,8 +23,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $row = mysqli_fetch_array($query);
         // Start the session
         echo session_id();
-        $_SESSION['userEmail'] = $row['userEmail'];
-        $_SESSION['firstName'] = $row['firstName'];
+        $_SESSION['user_id']=$row['user_id'];
+        $_SESSION['userEmail'] = $row['email'];
+        $_SESSION['firstName'] = $row['firstname'];
         $_SESSION['loggedIn'] = true;
         echo $_SESSION['loggedIn'];
         echo $_SESSION['firstName'];

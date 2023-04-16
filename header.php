@@ -10,7 +10,9 @@ require_once './dbConnect.php';
         <meta charset="UTF-8">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
         <link rel="stylesheet" href="./Css/style.css"/>
         <title>FitCyclos</title>
@@ -29,10 +31,7 @@ require_once './dbConnect.php';
                             <a class="nav-link active" href="./index.php">HOME</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active" href="#">BIKES</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#">ACCESSORIES</a>
+                            <a class="nav-link active" href="./bikes.php">BIKES</a>
                         </li>
                     </ul>
 
@@ -45,6 +44,7 @@ require_once './dbConnect.php';
                             ?>
                             <ul class="nav navbar-nav navbar-right">
                                 <li class="nav-item"><a class="nav-link active">Hello, <?php echo $_SESSION['firstName']; ?></a></li>
+                                <li class="nav-item"><a class="nav-link active" href="./cart.php">Your Cart</a></li>
                                 <li class="nav-item"><a class="nav-link active" href="./logout.php">Log Out</a></li>
                             </ul>
                             <?php
